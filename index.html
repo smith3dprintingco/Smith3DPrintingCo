@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Smith3DPrintingCo — fully 3D-printed PETG display replicas.">
+<title>Smith3DPrintingCo | PETG Replica Shop</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <a class="logo" href="#top">Smith<span>3D</span>PrintingCo</a>
+  <nav>
+    <a href="#cartridges">Cartridge Replicas</a>
+    <a href="#shells">Shotgun Shells</a>
+    <a href="#about">About</a>
+    <button id="openCart" class="cart-pill">Cart <b id="cartCount">0</b></button>
+  </nav>
+  <button id="mobileMenu" class="mobile-menu">☰</button>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-copy">
+    <p class="kicker">SMITH3DPRINTINGCO</p>
+    <h1>Replica ammunition.<br><em>Printed your way.</em></h1>
+    <p>Fully 3D-printed PETG display replicas with your choice of caliber, colors, and optional custom text.</p>
+    <div class="hero-actions"><a class="btn" href="#cartridges">Shop cartridges</a><a class="text-link" href="#shells">View shotgun shells →</a></div>
+    <div class="trust"><span>100% PETG</span><span>Non-functional replicas</span><span>Made to order</span></div>
+  </div>
+  <div class="hero-image"><img src="assets/cartridge-hero.jpg" alt="Smith3DPrintingCo PETG cartridge replicas on a display stand"></div>
+</section>
+
+<section class="notice">
+  <strong>Display replicas only.</strong>
+  <span>These products are completely 3D printed from PETG and are not functional ammunition. They contain no primer, powder, metal ammunition components, or other firing mechanism.</span>
+</section>
+
+<section id="cartridges" class="product-section">
+  <div class="section-title"><p class="kicker">01 / CARTRIDGES</p><h2>Build your cartridge.</h2><p>Choose your caliber, bullet color, casing color, and optional custom text.</p></div>
+  <div class="product-layout">
+    <div class="gallery"><img id="cartridgeImage" src="assets/cartridge-hero.jpg" alt="Cartridge replicas"><div class="thumbs"><button data-img="assets/cartridge-hero.jpg"><img src="assets/cartridge-hero.jpg" alt=""></button><button data-img="assets/cartridge-gallery.jpg"><img src="assets/cartridge-gallery.jpg" alt=""></button></div></div>
+    <div class="config">
+      <div class="product-name">3D Printed PETG Cartridge Replica</div>
+      <div class="price" id="cartPrice">$1.30 <small>each</small></div>
+
+      <label>Caliber<select id="caliber"></select></label>
+      <div class="two-col">
+        <label>Bullet color<select id="bulletColor"></select></label>
+        <label>Casing color<select id="caseColor"></select></label>
+      </div>
+      <label>Custom text <span class="muted">+$0.10 each • max 15 characters</span>
+        <input id="cartText" maxlength="15" placeholder="Optional text">
+        <div class="charcount"><span id="charCount">0</span>/15</div>
+      </label>
+      <label>Quantity<div class="qty"><button data-q="cartQty" data-d="-1">−</button><input id="cartQty" type="number" min="1" value="1"><button data-q="cartQty" data-d="1">+</button></div></label>
+      <button id="addCartridge" class="btn full">Add to cart</button>
+      <p class="fine">Your selected configuration will be included with the order.</p>
+    </div>
+  </div>
+</section>
+
+<section class="photo-band"><img src="assets/cartridge-gallery.jpg" alt="Multiple PETG cartridge replicas in different sizes"></section>
+
+<section id="shells" class="product-section alt">
+  <div class="section-title"><p class="kicker">02 / SHOTGUN SHELLS</p><h2>Build your shell.</h2><p>Choose your gauge, head color, case color, and optional custom text.</p></div>
+  <div class="product-layout shell-layout">
+    <div class="gallery"><img id="shellImage" src="assets/shotgun-shell-1.jpg" alt="3D printed PETG shotgun shell replicas"><div class="thumbs"><button data-shell-img="assets/shotgun-shell-1.jpg"><img src="assets/shotgun-shell-1.jpg" alt=""></button><button data-shell-img="assets/shotgun-shell-2.jpg"><img src="assets/shotgun-shell-2.jpg" alt=""></button><button data-shell-img="assets/shotgun-shell-3.jpg"><img src="assets/shotgun-shell-3.jpg" alt=""></button><button data-shell-img="assets/shotgun-shell-4.jpg"><img src="assets/shotgun-shell-4.jpg" alt=""></button></div></div>
+    <div class="config">
+      <div class="product-name">3D Printed PETG Shotgun Shell Replica</div>
+      <div class="price" id="shellPrice">$1.30 <small>each</small></div>
+      <label>Gauge<select id="gauge"></select></label>
+      <div class="two-col">
+        <label>Head color<select id="shellHeadColor"></select></label>
+        <label>Case color<select id="shellCaseColor"></select></label>
+      </div>
+      <label>Custom text <span class="muted">+$0.10 each • max 15 characters</span>
+        <input id="shellText" maxlength="15" placeholder="Optional text">
+        <div class="charcount"><span id="shellCharCount">0</span>/15</div>
+      </label>
+      <label>Quantity<div class="qty"><button data-q="shellQty" data-d="-1">−</button><input id="shellQty" type="number" min="1" value="1"><button data-q="shellQty" data-d="1">+</button></div></label>
+      <button id="addShell" class="btn full">Add to cart</button>
+      <p class="fine">$1.30 each. Custom text adds $0.10 per shell, maximum 15 characters.</p>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <p class="kicker">ABOUT</p><h2>Affordable prints, made with care.</h2>
+  <p>Smith3DPrintingCo is built around straightforward pricing and small-batch 3D printing. The goal is simple: make interesting display pieces without overcharging for the print.</p>
+</section>
+
+<section class="policies">
+  <div><h3>Materials</h3><p>Products in this collection are printed from PETG plastic.</p></div>
+  <div><h3>Replica notice</h3><p>Products are non-functional display replicas and are not ammunition.</p></div>
+  <div><h3>Custom orders</h3><p>Double-check custom text before placing an order. Custom text is limited to 15 characters.</p></div>
+</section>
+</main>
+
+<footer><div class="logo">Smith<span>3D</span>PrintingCo</div><div>© <span id="year"></span> Smith3DPrintingCo</div></footer>
+
+<aside id="cartDrawer" class="drawer">
+  <div class="drawer-head"><h2>Your cart</h2><button id="closeCart">×</button></div>
+  <div id="cartItems"></div>
+  <div class="drawer-bottom"><div class="total"><span>Total</span><strong id="cartTotal">$0.00</strong></div><button id="checkout" class="btn full">Secure checkout</button><p class="fine">Stripe checkout will activate after your Stripe account and server credentials are connected.</p></div>
+</aside>
+<div id="overlay"></div>
+<script src="app.js"></script>
+</body></html>
