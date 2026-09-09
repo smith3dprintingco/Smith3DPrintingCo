@@ -1,11 +1,9 @@
-let catalog;
+let catalog = window.SMITH_CATALOG;
 let cart = JSON.parse(localStorage.getItem("s3d-cart") || "[]");
 const $ = s => document.querySelector(s);
 const money = cents => `$${(cents/100).toFixed(2)}`;
 
-fetch("catalog.json").then(r=>r.json()).then(data=>{
-  catalog=data; init();
-}).catch(()=>alert("Catalog could not be loaded."));
+document.addEventListener("DOMContentLoaded",()=>{ init(); });
 
 function fillSelect(id, values){
   const el=$(id); el.innerHTML=values.map(v=>`<option value="${escapeHtml(v)}">${escapeHtml(v)}</option>`).join("");
@@ -69,6 +67,3 @@ $("#checkout").onclick=async()=>{
     const data=await r.json(); if(data.url)location.href=data.url; else throw new Error("No checkout URL returned.");
   }catch(e){alert("Stripe checkout is not connected yet. Once the live site is linked to your Stripe account, this button will open secure Stripe Checkout.")}
 };
-
-
-document.querySelectorAll('[data-shell-img]').forEach(b=>b.addEventListener('click',()=>{document.getElementById('shellImage').src=b.dataset.shellImg;}));

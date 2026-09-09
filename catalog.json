@@ -47,12 +47,19 @@
       "customTextFeeCents": 10,
       "maxCustomText": 15,
       "gauges": [
-        "12 Gauge",
+        "12 Gauge \u2014 3 inch",
         "20 Gauge",
-        "16 Gauge",
+        "16 Gauge \u2014 3 inch",
         ".410 Gauge"
       ],
       "images": []
     }
+  },
+  "shipping": {
+    "originZip": "80127",
+    "packageLengthIn": 9,
+    "packageWidthIn": 6,
+    "packageWeightOz": 3,
+    "method": "server-side-carrier-rate"
   }
 }
