@@ -13,6 +13,8 @@
     <a href="#cartridges">Cartridge Replicas</a>
     <a href="#shells">Shotgun Shells</a>
     <a href="#about">About</a>
+    <a href="#policies">Policies</a>
+    <a href="#contact">Contact</a>
     <button id="openCart" class="cart-pill">Cart <b id="cartCount">0</b></button>
   </nav>
   <button id="mobileMenu" class="mobile-menu">☰</button>
@@ -89,19 +91,30 @@
   <p>Smith3DPrintingCo is built around straightforward pricing and small-batch 3D printing. The goal is simple: make interesting display pieces without overcharging for the print.</p>
 </section>
 
-<section class="policies">
-  <div><h3>Materials</h3><p>Products in this collection are printed from PETG plastic.</p></div>
-  <div><h3>Replica notice</h3><p>Products are non-functional display replicas and are not ammunition.</p></div>
-  <div><h3>Custom orders</h3><p>Double-check custom text before placing an order. Custom text is limited to 15 characters.</p></div>
+<section class="policies" id="policies">
+  <div><h3>Materials &amp; replica notice</h3><p>Products in this collection are printed from PETG plastic. They are inert, non-functional display replicas and are not ammunition. They contain no primer, powder, propellant, or firing mechanism.</p></div>
+  <div><h3>Customer service</h3><p>Email <a href="mailto:smith3dprintingco@gmail.com">smith3dprintingco@gmail.com</a> for questions about an order, product options, shipping, or returns.</p></div>
+  <div><h3>Returns &amp; refunds</h3><p>Because these products are made to order, contact us before returning an item. If an item arrives damaged, defective, or materially different from the ordered configuration, email us within 7 days of delivery with your order information and photos. Approved refunds or replacements will be handled through the original payment method.</p></div>
+  <div><h3>Order cancellations</h3><p>Cancellation requests should be emailed as soon as possible. Orders that have already entered production may not be cancellable. Contact us at <a href="mailto:smith3dprintingco@gmail.com">smith3dprintingco@gmail.com</a> for help.</p></div>
+  <div><h3>Shipping</h3><p>Orders are shipped after production. Shipping charges are presented at checkout when available. We currently ship within the United States. Customers are responsible for providing an accurate shipping address and for complying with applicable laws and carrier restrictions.</p></div>
+  <div><h3>Custom text</h3><p>Double-check custom text before placing an order. Custom text is limited to 15 characters and adds $0.10 per item.</p></div>
+  <div><h3>Legal restrictions</h3><p>These products are intended solely as inert display replicas. Customers are responsible for knowing and following laws, regulations, and carrier rules that apply to the possession or shipment of replica items in their location. Smith3DPrintingCo may decline an order where shipment or sale is not permitted.</p></div>
+  <div><h3>Privacy</h3><p>Payment information is processed through Stripe during checkout. Smith3DPrintingCo does not ask customers to send payment-card numbers by email or through the website contact form.</p></div>
+  <div><h3>Terms</h3><p>By placing an order, you confirm that the configuration you selected is correct and that you are purchasing an inert, non-functional plastic display replica. Product photos are examples; small differences in color or print finish can occur.</p></div>
+</section>
+
+<section id="contact" class="about contact-section">
+  <p class="kicker">CONTACT</p><h2>Questions about an order?</h2>
+  <p>Contact Smith3DPrintingCo at <a href="mailto:smith3dprintingco@gmail.com">smith3dprintingco@gmail.com</a>. Please include your order number when contacting us about an existing order.</p>
 </section>
 </main>
 
-<footer><div class="logo">Smith<span>3D</span>PrintingCo</div><div>© <span id="year"></span> Smith3DPrintingCo</div></footer>
+<footer><div class="logo">Smith<span>3D</span>PrintingCo</div><div>© <span id="year"></span> Smith3DPrintingCo · <a href="mailto:smith3dprintingco@gmail.com">smith3dprintingco@gmail.com</a> · <a href="#policies">Policies</a></div></footer>
 
 <aside id="cartDrawer" class="drawer">
   <div class="drawer-head"><h2>Your cart</h2><button id="closeCart">×</button></div>
   <div id="cartItems"></div>
-  <div class="drawer-bottom"><div class="total"><span>Total</span><strong id="cartTotal">$0.00</strong></div><button id="checkout" class="btn full">Secure checkout</button><p class="fine">Stripe checkout will activate after your Stripe account and server credentials are connected.</p></div>
+  <div class="drawer-bottom"><div class="total"><span>Total</span><strong id="cartTotal">$0.00</strong></div><button id="checkout" class="btn full">Secure checkout</button><p class="fine">Secure checkout is powered by Stripe. Shipping is shown during checkout when the payment backend is connected.</p></div>
 </aside>
 <div id="overlay"></div>
 <script>window.SMITH_CATALOG={"store":{"name":"Smith3DPrintingCo","tagline":"3D Printed. Made for Display.","currency":"usd"},"colors":["Red","Pastel Green","Light Purple","Brass","Gold","Light Gold","Black","White"],"cartridges":["7.62×54",".223 / 5.56","7.62×39","7.92×57 Mauser","7.65×21 Parabellum","9×19 Parabellum","10mm AUTO",".30-06 Springfield",".40 S&W",".45 ACP",".308 Winchester",".338 Lapua Magnum",".500 S&W Magnum",".50 BMG"],"products":{"cartridge":{"name":"3D Printed PETG Cartridge Replica","basePriceCents":130,"customTextFeeCents":10,"maxCustomText":15,"images":["assets/cartridge-hero.jpg","assets/cartridge-gallery.jpg"]},"shotgunShell":{"name":"3D Printed PETG Shotgun Shell Replica","basePriceCents":130,"customTextFeeCents":10,"maxCustomText":15,"gauges":["12 Gauge — 3 inch","20 Gauge","16 Gauge — 3 inch",".410 Gauge"],"images":["assets/shotgun-shell-selected.jpg"]}},"shipping":{"originZip":"80127","packageLengthIn":9,"packageWidthIn":6,"packageWeightOz":3,"method":"server-side-carrier-rate"}}</script><script src="app.js"></script>

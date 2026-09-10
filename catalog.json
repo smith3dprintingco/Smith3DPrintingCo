@@ -2,7 +2,8 @@
   "store": {
     "name": "Smith3DPrintingCo",
     "tagline": "3D Printed. Made for Display.",
-    "currency": "usd"
+    "currency": "usd",
+    "contactEmail": "smith3dprintingco@gmail.com"
   },
   "colors": [
     "Red",
@@ -61,5 +62,15 @@
     "packageWidthIn": 6,
     "packageWeightOz": 3,
     "method": "server-side-carrier-rate"
+  },
+  "policies": {
+    "customerServiceEmail": "smith3dprintingco@gmail.com",
+    "returnsWindowDays": 7,
+    "customTextMaxCharacters": 15,
+    "shippingOriginZip": "80127",
+    "shippingPackage": "6 x 9 inch envelope, approximately 3 oz",
+    "shippingCountries": [
+      "US"
+    ]
   }
 }
