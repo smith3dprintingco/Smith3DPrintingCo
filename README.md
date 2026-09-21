@@ -27,3 +27,7 @@ The current backend collects the customer's US shipping address. A carrier-rate 
 
 ## Stripe testing
 Use Stripe test mode first. Never paste a live Stripe secret key into `index.html`, `app.js`, GitHub, or a chat message.
+
+
+## Stripe deployment
+Frontend API endpoint is configured for https://smith3dprintingco-backend.onrender.com. The backend requires STRIPE_SECRET_KEY in Render environment variables. Set PUBLIC_BASE_URL to https://smith3dprintingco.github.io/Smith3DPrintingCo/ if desired. Never commit secret keys.

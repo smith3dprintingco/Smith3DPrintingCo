@@ -1,5 +1,6 @@
 let catalog = window.SMITH_CATALOG;
 let cart = JSON.parse(localStorage.getItem("s3d-cart") || "[]");
+const API_BASE = "https://smith3dprintingco-backend.onrender.com";
 const $ = s => document.querySelector(s);
 const money = cents => `$${(cents/100).toFixed(2)}`;
 
@@ -62,8 +63,8 @@ document.querySelectorAll(".thumbs button").forEach(b=>b.onclick=()=>{$("#cartri
 $("#checkout").onclick=async()=>{
   if(!cart.length)return;
   try{
-    const r=await fetch("/api/create-checkout-session",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({items:cart})});
-    if(!r.ok)throw new Error("Checkout is not connected yet.");
-    const data=await r.json(); if(data.url)location.href=data.url; else throw new Error("No checkout URL returned.");
-  }catch(e){alert("Stripe checkout is not connected yet. Once the live site is linked to your Stripe account, this button will open secure Stripe Checkout.")}
+    const r=await fetch(`${API_BASE}/api/create-checkout-session`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({items:cart})});
+    const data=await r.json().catch(()=>({}));
+    if(!r.ok)throw new Error(data.error || `Checkout request failed (${r.status}).`); if(data.url)location.href=data.url; else throw new Error("No checkout URL returned.");
+  }catch(e){alert(`Stripe checkout could not be started. ${e.message}`)}
 };
