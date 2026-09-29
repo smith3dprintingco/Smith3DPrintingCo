@@ -114,8 +114,31 @@
 <aside id="cartDrawer" class="drawer">
   <div class="drawer-head"><h2>Your cart</h2><button id="closeCart">×</button></div>
   <div id="cartItems"></div>
-  <div class="drawer-bottom"><div class="total"><span>Total</span><strong id="cartTotal">$0.00</strong></div><button id="checkout" class="btn full">Secure checkout</button><p class="fine">Secure checkout is powered by Stripe. Shipping is shown during checkout when the payment backend is connected.</p></div>
+  <div class="drawer-bottom">
+  <div class="shipping-box">
+    <h3>Shipping</h3>
+    <p class="fine">Enter your U.S. shipping address to see current shipping options. Rates are calculated from ZIP 80127 for your package.</p>
+    <div class="two-col">
+      <label>First name<input id="shipFirstName" autocomplete="given-name"></label>
+      <label>Last name<input id="shipLastName" autocomplete="family-name"></label>
+    </div>
+    <label>Street address<input id="shipStreet" autocomplete="street-address"></label>
+    <label>Apartment, suite, etc. <span class="muted">optional</span><input id="shipStreet2" autocomplete="address-line2"></label>
+    <div class="two-col">
+      <label>City<input id="shipCity" autocomplete="address-level2"></label>
+      <label>State<select id="shipState" autocomplete="address-level1"></select></label>
+    </div>
+    <label>ZIP code<input id="shipZip" inputmode="numeric" autocomplete="postal-code" maxlength="10"></label>
+    <button id="getShipping" class="btn full" type="button">Calculate shipping</button>
+    <div id="shippingStatus" class="shipping-status" aria-live="polite"></div>
+    <div id="shippingRates" class="shipping-rates"></div>
+  </div>
+  <div class="total"><span>Products</span><strong id="cartTotal">$0.00</strong></div>
+  <div class="total shipping-total"><span>Shipping</span><strong id="shippingTotal">Select a rate</strong></div>
+  <button id="checkout" class="btn full" disabled>Secure checkout</button>
+  <p class="fine">Shipping is calculated from your address and rechecked by the secure Stripe payment server before payment.</p>
+</div>
 </aside>
 <div id="overlay"></div>
-<script>window.SMITH_CATALOG={"store":{"name":"Smith3DPrintingCo","tagline":"3D Printed. Made for Display.","currency":"usd"},"colors":["Red","Pastel Green","Light Purple","Brass","Gold","Light Gold","Black","White"],"cartridges":["7.62×54",".223 / 5.56","7.62×39","7.92×57 Mauser","7.65×21 Parabellum","9×19 Parabellum","10mm AUTO",".30-06 Springfield",".40 S&W",".45 ACP",".308 Winchester",".338 Lapua Magnum",".500 S&W Magnum",".50 BMG"],"products":{"cartridge":{"name":"3D Printed PETG Cartridge Replica","basePriceCents":130,"customTextFeeCents":10,"maxCustomText":15,"images":["assets/cartridge-hero.jpg","assets/cartridge-gallery.jpg"]},"shotgunShell":{"name":"3D Printed PETG Shotgun Shell Replica","basePriceCents":130,"customTextFeeCents":10,"maxCustomText":15,"gauges":["12 Gauge — 3 inch","20 Gauge","16 Gauge — 3 inch",".410 Gauge"],"images":["assets/shotgun-shell-selected.jpg"]}},"shipping":{"originZip":"80127","packageLengthIn":9,"packageWidthIn":6,"packageWeightOz":3,"method":"server-side-carrier-rate"}}</script><script src="app.js?v=9"></script>
+<script>window.SMITH_CATALOG={"store":{"name":"Smith3DPrintingCo","tagline":"3D Printed. Made for Display.","currency":"usd"},"colors":["Red","Pastel Green","Light Purple","Brass","Gold","Light Gold","Black","White"],"cartridges":["7.62×54",".223 / 5.56","7.62×39","7.92×57 Mauser","7.65×21 Parabellum","9×19 Parabellum","10mm AUTO",".30-06 Springfield",".40 S&W",".45 ACP",".308 Winchester",".338 Lapua Magnum",".500 S&W Magnum",".50 BMG"],"products":{"cartridge":{"name":"3D Printed PETG Cartridge Replica","basePriceCents":130,"customTextFeeCents":10,"maxCustomText":15,"images":["assets/cartridge-hero.jpg","assets/cartridge-gallery.jpg"]},"shotgunShell":{"name":"3D Printed PETG Shotgun Shell Replica","basePriceCents":130,"customTextFeeCents":10,"maxCustomText":15,"gauges":["12 Gauge — 3 inch","20 Gauge","16 Gauge — 3 inch",".410 Gauge"],"images":["assets/shotgun-shell-selected.jpg"]}},"shipping":{"originZip":"80127","packageLengthIn":9,"packageWidthIn":6,"packageWeightOz":3,"method":"server-side-carrier-rate"}}</script><script src="app.js?v=10"></script>
 </body></html>
